@@ -1,0 +1,17 @@
+<h1>Input-Output</h1>
+@if (data) {
+<p>{{ data | json }}</p>
+}
+
+<button (click)="changeValue()">Change value</button>
+
+<button (click)="callChildEvent(childInfo)">
+  Call child event from parent
+</button>
+
+<button (click)="changeContent()">change ng content</button>
+<app-child
+  #childInfo
+  [name]="value"
+  (emitToParent)="onmessagefromchild($event)"
+>{{content}}</app-child>

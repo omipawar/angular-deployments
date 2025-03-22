@@ -1,0 +1,18 @@
+<h1>Count is {{count()}}</h1>
+<h6>Noraml variable {{normalvalue}}</h6>
+
+@if (isShowMessage) {
+    <p>The count value cannot be less than 0 and greater than 10!</p>
+}
+
+<button (click)="count.set(count()+1)">+</button>
+<button (click)="count.set(count()-1)">-</button>
+
+<hr>
+<h1>Computed signal</h1>
+<h6>X is {{x()}}</h6>
+<h6>Y is {{y()}}</h6>
+<h6>Total is {{z()}}</h6>
+
+<button (click)="x.set(x()+2)">updateX</button>
+<button (click)="y.set(y()+2)">updateY</button>

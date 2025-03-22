@@ -1,0 +1,15 @@
+<div class="list-group">
+    @for (post of posts; track post.id) {
+        @if ($even) {
+            <button type="button" class="list-group-item list-group-item-action active">
+              {{$index + 1}}.&nbsp;{{post.title}}
+            </button>
+        } @else if ($odd) {
+            <button type="button" class="list-group-item list-group-item-action">
+                {{$index + 1}}.&nbsp;{{post.title}}
+              </button>
+        }
+    }
+</div>
+<hr>
+
