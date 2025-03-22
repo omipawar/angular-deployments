@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular19-turorial": {
+    "angular-deployments": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular19-turorial",
+            "baseHref": "/angular-deployments/",
+            "outputPath": "dist/angular-deployments",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular19-turorial:build:production"
+              "buildTarget": "angular-deployments:build:production"
             },
             "development": {
-              "buildTarget": "angular19-turorial:build:development"
+              "buildTarget": "angular-deployments:build:development"
             }
           },
           "defaultConfiguration": "development"
